@@ -1,0 +1,14 @@
+{
+    "watch": ["src", "index"],
+    "ext": "ts",
+    "ignore": ["src/**/*.spec.ts"],
+    "exec": "ts-node ./index.ts",
+    "events": {
+      "start": "echo 'events start kill:'$(lsof -t -i:3000) && kill -9 $(lsof -t -i:3000)",
+      "restart1": "echo 'events restart kill' && kill -9 $(lsof -t -i:3000) || fuser -k 3000/tcp"
+    },
+    "scripts": {
+      "start1": "echo 'start kill' && kill -9 $(lsof -t -i:3000)",
+      "restart1": "echo 'restart kill' && kill -9 $(lsof -t -i:3000)"
+    }
+  }

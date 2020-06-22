@@ -1,0 +1,12 @@
+version: '3.4'
+services:
+  cts_backend:
+    build: .
+    ports: 
+      - 3001:3001
+    logging:
+      options:
+        max-size: "1m"
+        max-file: "10"
+    env_file: .env 
+    restart: on-failure

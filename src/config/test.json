@@ -1,0 +1,31 @@
+{
+	"SERVER": {
+		"base_url": "http://localhost",
+		"port": 3001,
+		"uiUrl": ["https://site.com", "http://site.com", "https://www.site.com"],
+		"prefix": "/api"
+	},
+	"AUTH": {
+		"secret": "$2b$08$j.hh7XJkhDOh.3Bx6UTL6e",
+		"secure": false,
+		"expiry": 1209600
+	},
+	"DB": {
+		"url": "20.0.0.63:27017/project123",
+		"user": null,
+		"password": null,
+		"ssl": false
+	},
+	"AWS": {
+		"IAM_USER_KEY": "IAM_USER_KEY",
+		"IAM_USER_SECRET": "IAM_USER_SECRET",
+		"BUCKET_NAME": "test-bucket-for-documents",
+		"SIGNATURE_VERSION": "v4",
+		"REGION": "us-east-2"
+	},
+	"LAMBDA": {
+		"url": "https://rs9jwkaso6.execute-api.us-east-2.amazonaws.com/default/DataOutcome_calculation",
+		"key": "lambda_key"
+	}
+}
+ 
